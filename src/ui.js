@@ -18,3 +18,13 @@ export function updateIcon(icon){
     const iconElement = document.querySelector('#icon') ;
     iconElement.src = icon;
 }
+
+export function updateWind(wind){
+    const windElement = document.querySelector('#wind');
+    windElement.innerText = wind;
+}
+
+export function updateHumidity(humidity){
+    const humidElement = document.querySelector('#humidity');
+    humidElement.innerText = humidity;
+}

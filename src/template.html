@@ -7,18 +7,25 @@
     <title>Weather App</title>
 </head>
 <body>
+    
     <div class="page">
         <div class="app">
+            <div class="container">
+                <div class="loading" id="loading"></div>
+                <div class="data" id="data"></div>
+            </div>
             <div id="conditionbox">
                 <div id="condition"></div>
                 <img src="" alt="" id="icon">
                 <div id="temp"></div>
+                <div id="wind"></div>
+                <div id="humidity"></div>
             </div>
         </div>
         <div class="nav">
             <form class="cityform">
                 <div id="formholder">
-                    <input type="text" id="location-input" name="location" value="City/Zip Code" required>
+                    <input type="text" id="location-input" name="location" placeholder="City/Zip Code" required>
                     <button type="submit" id="submit-button">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M22.71 11.291l-18-8a1 1 0 0 0-.71 0A1 1 0 0 0 4 4v16a1 1 0 0 0 1.29.96l18-8a1 1 0 0 0 0-1.92z"/>
