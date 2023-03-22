@@ -11,7 +11,9 @@ formSubmit.addEventListener('click', async (event) => {
     event.preventDefault();
     const locationInput = document.querySelector('#location-input');
     const location = locationInput.value;
+    const container = document.querySelector('.container');
     loading.style.display = 'block';
+    container.style.display = 'block';
     conditionBox.style.display = 'none';
 
     try {
@@ -19,6 +21,7 @@ formSubmit.addEventListener('click', async (event) => {
         console.log(weatherData)
         loading.style.display = 'none';
         conditionBox.style.display = 'block';
+        container.style.display = 'none';
         updateCondition(weatherData.current.condition.text)
         updateWind(weatherData.current.wind_mph + " MPH " + weatherData.current.wind_dir)
         updateHumidity("Humidity:" + weatherData.current.humidity + "%")
@@ -29,6 +32,7 @@ formSubmit.addEventListener('click', async (event) => {
         window.alert("Location not found.")
         loading.style.display = 'none';
         conditionBox.style.display = 'none';
+        container.style.display = 'none';
         updateLocation("");
         console.error(err);
     }
